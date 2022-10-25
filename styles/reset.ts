@@ -92,6 +92,7 @@ const reset = css`
         padding: 0;
         border: 0;
         vertical-align: baseline;
+        color: white;
     }
     /* HTML5 display-role reset for older browsers */
     article,
@@ -138,6 +139,21 @@ const reset = css`
         outline: 0;
         border: none;
         cursor: pointer;
+    }
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: white;
+    }
+
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: white;
     }
 `;
 

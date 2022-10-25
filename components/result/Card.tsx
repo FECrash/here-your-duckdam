@@ -9,7 +9,7 @@ const Card = ({ children }: Item) => {
 
 export default Card;
 
-const StyledCard = styled.div`
+export const StyledCard = styled.div`
     background-color: ${({ theme }) => theme.color.background.message};
     box-shadow: ${({ theme }) => theme.shadow.dp_4};
     width: 90%;

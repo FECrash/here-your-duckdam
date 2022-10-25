@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { useRouter } from 'next/router';
 
 import { AttitudeRange, MessageBox, MessageItem } from '@/components/attitude';
-import { Button, Description, Title } from '@/components/common';
+import { Button, Description, SubTitle, Title } from '@/components/common';
 import { Bottom } from '@/components/layout';
 import useAttitudeHooks from '@/shared/hooks/useAttitudeHooks';
 import useDuckdam from '@/shared/hooks/useDuckdam';
@@ -12,12 +12,12 @@ const Attitude = () => {
     const { message1, message2, askMessage, politeLevel, setPoliteRange } =
         useAttitudeHooks();
 
-    const { addNewDuckDam } = useDuckdam();
+    const { addNewDuckdam } = useDuckdam();
 
     const router = useRouter();
 
-    const handleAddNewDuckDam = async () => {
-        const id = await addNewDuckDam(politeLevel);
+    const handleAddNewDuckdam = async () => {
+        const id = await addNewDuckdam(politeLevel);
         router.push(`load/?id=${id}`);
     };
 
@@ -40,7 +40,7 @@ const Attitude = () => {
                 />
                 <Bottom>
                     <Button
-                        onClick={handleAddNewDuckDam}
+                        onClick={handleAddNewDuckdam}
                         color={theme.color.text.white}
                         backgroundColor={theme.color.background.button}
                     >
@@ -54,9 +54,6 @@ const Attitude = () => {
 
 export default Attitude;
 
-const SubTitle = styled.h2`
-    font-size: 20px;
-`;
 const Wrapper = styled.div`
     width: 100%;
     height: 100%;

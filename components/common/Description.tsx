@@ -11,7 +11,7 @@ const StyledDescription = styled.div`
     margin-top: 10px;
     font-size: 14px;
     word-break: break-all;
-    color: ${({ theme }) => theme.color.text.description};
+    color: ${({ theme }) => theme.color.text.white};
     line-height: 150%;
     letter-spacing: -0.2px;
     text-align: center;

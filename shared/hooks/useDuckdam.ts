@@ -1,16 +1,26 @@
 import axios from 'axios';
 
-import type { PoliteKey } from '@/shared/types/DuckDam';
-import { randomNewDuckDam } from '@/shared/utils/duckdamGenerator';
+import type { DuckdamWithImg, PoliteKey } from '@/shared/types/Duckdam';
+import { randomNewDuckdam } from '@/shared/utils/duckdamGenerator';
 
-const useDuckdam = () => {
-    const addNewDuckDam = async (politeLevel: PoliteKey) => {
-        const newDuckDam = {
-            ...randomNewDuckDam(politeLevel),
-        };
+const useDuckdam = (customMessage?: object) => {
+    const addNewDuckdam = async (arg: PoliteKey | DuckdamWithImg) => {
+        let newDuckdam;
+
+        if (typeof arg == 'number') {
+            newDuckdam = {
+                ...randomNewDuckdam(arg),
+            };
+        }
+
+        if (typeof arg == 'object') {
+            newDuckdam = {
+                ...customMessage,
+            };
+        }
 
         const url = '/api/duckdam/add';
-        const { data, status } = await axios.post(url, newDuckDam, {
+        const { data, status } = await axios.post(url, newDuckdam, {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -21,7 +31,7 @@ const useDuckdam = () => {
         }
     };
 
-    return { addNewDuckDam };
+    return { addNewDuckdam };
 };
 
 export default useDuckdam;

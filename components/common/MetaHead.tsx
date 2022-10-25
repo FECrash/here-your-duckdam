@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import { DefaultPreviewImageUrl } from '@/shared/constant/DefaultPreviewImageUrl';
+
 type MetaHeadProps = {
     tabTitle: string;
     title: string;
@@ -13,8 +15,8 @@ const MetaHead = ({
     tabTitle = '여기 덕담이요!',
     title = '여기 덕담이요!',
     description = '가족, 친구들에게 따뜻한 한마디를 선물해보세요!',
+    img_url = DefaultPreviewImageUrl,
     url = process.env.NEXT_PUBLIC_SITE_URL,
-    img_url = process.env.NEXT_PUBLIC_DEFAULT_OG_IMAGE,
 }: OptionalMetaHeadProps) => {
     return (
         <Head>

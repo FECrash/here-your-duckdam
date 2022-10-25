@@ -28,7 +28,9 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100vh;
     box-shadow: ${({ theme }) => theme.shadow.dp_4};
-    background: url('/images/background.png') #fcf5e5;
+    background: url('/images/halloween/background.png')
+        ${({ theme }) => theme.color.background.halloween_black};
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center bottom;
 `;

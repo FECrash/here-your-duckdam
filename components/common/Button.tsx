@@ -27,8 +27,10 @@ const Wrapper = styled.div`
 
 const StyledButton = styled.button<ButtonProps>`
     width: 90%;
-    color: ${(props) => props.color};
-    background-color: ${(props) => props.backgroundColor};
+    /* color: ${(props) => props.color};
+    background-color: ${(props) => props.backgroundColor}; */
+    color: ${({ theme }) => theme.color.text.black};
+    background-color: ${({ theme }) => theme.color.background.button};
     border-radius: 10px;
     font-weight: bold;
     font-size: 1em;

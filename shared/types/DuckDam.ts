@@ -1,10 +1,10 @@
-export type DuckDamObj = {
+export type DuckdamObj = {
     first_word: string;
     second_word: string;
     third_word: string;
 };
 
-export type DuckDamWithImg = DuckDamObj & {
+export type DuckdamWithImg = DuckdamObj & {
     img_url: string;
 };
 

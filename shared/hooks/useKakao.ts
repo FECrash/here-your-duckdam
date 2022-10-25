@@ -1,8 +1,9 @@
+import { DefaultPreviewImageUrl } from '@/shared/constant/DefaultPreviewImageUrl';
 import type { ShareKakaoType } from '@/shared/types/SharedKakao';
 
 const useKakao = () => {
     const shareWithKakao = ({
-        imageURL = process.env.NEXT_PUBLIC_DEFAULT_OG_IMAGE,
+        imageURL = DefaultPreviewImageUrl,
         resultURL,
     }: ShareKakaoType) => {
         const { Kakao } = window;

@@ -1,8 +1,17 @@
+import styled from '@emotion/styled';
 import Image from 'next/image';
-import logo_light from 'public/icons/main-logo-light.png';
+import logo from 'public/icons/halloween/main-logo.png';
 
 const Logo = () => {
-    return <Image src={logo_light} layout="fixed" alt="달토끼" />;
+    return (
+        <Wrapper>
+            <Image src={logo} layout="responsive" alt="달토끼" />
+        </Wrapper>
+    );
 };
 
 export default Logo;
+
+const Wrapper = styled.div`
+    width: 100%;
+`;

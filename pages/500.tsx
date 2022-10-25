@@ -1,15 +1,17 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
-import { Button, Description, EmojiTitle, Title } from '@/components/common';
+import { Button, Description, Title } from '@/components/common';
 import { Bottom } from '@/components/layout';
+import error from '@/public/icons/halloween/404.png';
 import theme from '@/styles/theme';
 
 const Custom500 = () => {
     return (
         <>
-            <EmojiTitle>😢</EmojiTitle>
-            <Title>엇! 토끼와의 연결이 끊긴 것 같아요!</Title>
-            <Description>잠시 후에 다시 이용해주세요🙇‍♀️</Description>
+            <Image src={error} alt="토끼가 카드를 고르는 중" />
+            <Title>엇! 서버에 오류가 생겼어요!</Title>
+            <Description>괜찮아요 토끼가 곧 구해드릴게요!</Description>
 
             <Bottom>
                 <Link href="/">

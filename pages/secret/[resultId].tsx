@@ -11,11 +11,11 @@ import {
 } from '@/components/common';
 import { Bottom } from '@/components/layout';
 import { Card } from '@/components/result';
-import type { DuckDamWithImg } from '@/shared/types/DuckDam';
+import type { DuckdamWithImg } from '@/shared/types/Duckdam';
 import { theme } from '@/styles/index';
 
 type ResultProps = {
-    data: DuckDamWithImg;
+    data: DuckdamWithImg;
 };
 
 const ResultDetail = ({ data }: ResultProps) => {

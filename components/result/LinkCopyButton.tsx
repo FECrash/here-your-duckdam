@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import copyIcon from 'public/images/copy-icon.svg';
+import copyIcon from 'public/images/chuseok/copy-icon.svg';
 import React, { useRef } from 'react';
 
 const LinkCopyButton = (props: { children: React.ReactNode }) => {
